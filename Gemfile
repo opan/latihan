@@ -19,6 +19,10 @@ gem 'debugger', '~> 1.6.6'
 
 gem 'better_errors', '~> 1.1.0'
 
+gem 'ransack', '~> 1.2.3'
+
+gem 'devise', '~> 3.2.4'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
