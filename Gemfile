@@ -23,6 +23,8 @@ gem 'ransack', '~> 1.2.3'
 
 gem 'devise', '~> 3.2.4'
 
+gem 'bootstrap3-rails', '~> 3.1.1'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
