@@ -5,11 +5,22 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
-<div class="page-header well container">
+
+ <div class="page-header well container">
   <h1>Opan Website <small>Selamat Datang</small></h1>
 </div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <ul>
+    	<li class="active"><a href="home_pages#index">HOME</a></li>
+    	<li><a href="artikels#index">ARTIKEL</a></li>
+    	<li><a href="puisis#index">PUISI</a></li>
+    </ul>
+  </div>
+</nav>
+</head>
+<body>
+
 <%= yield %>
 
 </body>
