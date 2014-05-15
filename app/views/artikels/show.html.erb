@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @artikel.title %>
+</p>
+
+<p>
+  <strong>Ar type:</strong>
+  <%= @artikel.ar_type %>
+</p>
+
+<p>
+  <strong>Ar con:</strong>
+  <%= @artikel.ar_con %>
+</p>
+
+<%= link_to 'Edit', edit_artikel_path(@artikel) %> |
+<%= link_to 'Index', artikels_path %>

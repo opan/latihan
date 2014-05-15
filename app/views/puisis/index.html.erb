@@ -1,0 +1,35 @@
+<h1>Listing puisis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Puisi type</th>
+      <th>Puisi tema</th>
+      <th>Puisi for</th>
+      <th>Puisi con</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @puisis.each do |puisi| %>
+      <tr>
+        <td><%= puisi.title %></td>
+        <td><%= puisi.puisi_type %></td>
+        <td><%= puisi.puisi_tema %></td>
+        <td><%= puisi.puisi_for %></td>
+        <td><%= puisi.puisi_con %></td>
+        <td><%= link_to 'Show', puisi %></td>
+        <td><%= link_to 'Edit', edit_puisi_path(puisi) %></td>
+        <td><%= link_to 'Destroy', puisi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Puisi', new_puisi_path %>

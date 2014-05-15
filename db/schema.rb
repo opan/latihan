@@ -11,11 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511132807) do
+ActiveRecord::Schema.define(version: 20140513151539) do
 
-  create_table "articles", force: true do |t|
+  create_table "artikels", force: true do |t|
     t.string   "title"
-    t.text     "text"
+    t.string   "ar_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "ar_con",     null: false
+  end
+
+  create_table "puisis", force: true do |t|
+    t.string   "title"
+    t.string   "puisi_type"
+    t.text     "puisi_tema"
+    t.string   "puisi_for"
+    t.text     "puisi_con"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

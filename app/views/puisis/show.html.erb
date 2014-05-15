@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @puisi.title %>
+</p>
+
+<p>
+  <strong>Puisi type:</strong>
+  <%= @puisi.puisi_type %>
+</p>
+
+<p>
+  <strong>Puisi tema:</strong>
+  <%= @puisi.puisi_tema %>
+</p>
+
+<p>
+  <strong>Puisi for:</strong>
+  <%= @puisi.puisi_for %>
+</p>
+
+<p>
+  <strong>Puisi con:</strong>
+  <%= @puisi.puisi_con %>
+</p>
+
+<%= link_to 'Edit', edit_puisi_path(@puisi) %> |
+<%= link_to 'Back', puisis_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  puisi_type: MyString
+  puisi_tema: MyText
+  puisi_for: MyString
+  puisi_con: MyText
+
+two:
+  title: MyString
+  puisi_type: MyString
+  puisi_tema: MyText
+  puisi_for: MyString
+  puisi_con: MyText

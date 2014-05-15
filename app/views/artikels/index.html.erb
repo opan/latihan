@@ -1,0 +1,31 @@
+<h1>Listing artikels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Ar type</th>
+      <th>Ar con</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artikels.each do |artikel| %>
+      <tr>
+        <td><%= artikel.title %></td>
+        <td><%= artikel.ar_type %></td>
+        <td><%= artikel.ar_con %></td>
+        <td><%= link_to 'Show', artikel %></td>
+        <td><%= link_to 'Edit', edit_artikel_path(artikel) %></td>
+        <td><%= link_to 'Destroy', artikel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Artikel', new_artikel_path %>

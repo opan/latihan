@@ -1,0 +1,37 @@
+<%= form_for(@puisi) do |f| %>
+  <% if @puisi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@puisi.errors.count, "error") %> prohibited this puisi from being saved:</h2>
+
+      <ul>
+      <% @puisi.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :puisi_type %><br>
+    <%= f.text_field :puisi_type %>
+  </div>
+  <div class="field">
+    <%= f.label :puisi_tema %><br>
+    <%= f.text_area :puisi_tema %>
+  </div>
+  <div class="field">
+    <%= f.label :puisi_for %><br>
+    <%= f.text_field :puisi_for %>
+  </div>
+  <div class="field">
+    <%= f.label :puisi_con %><br>
+    <%= f.text_area :puisi_con %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
