@@ -3,6 +3,8 @@ Latihan::Application.routes.draw do
 
   resources :artikels
 
+  resources :home_pages
+
   root 'home_pages#index'
   
 
