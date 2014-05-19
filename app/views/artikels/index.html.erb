@@ -1,3 +1,4 @@
+<div class="table-container">
 <div class="container well">
   <h3>Daftar Artikel</h3>
 </div>
@@ -6,20 +7,20 @@
 <table style="text-align: justify" class="table table-striped table-hover table-condensed table-bordered">
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Judul</th>
       <th>Tipe Artikel</th>
       <th>Content Artikel</th>
     </tr>
   </thead>
 
-  <tbody style="cursor: pointer">
+  <tbody>
     <% @artikels.each do |artikel| %>
-      <tr onclick="redirectTo('<%= artikel_path(artikel.id)%>')">
+      <tr onclick="redirectTo('<%= artikel_path(artikel.id)%>')"  style="cursor: pointer">
         <td><%= artikel.title %></td>
         <td><%= artikel.ar_type %></td>
         <td><%= artikel.ar_con %></td>
-        <td><%= link_to 'Edit', edit_artikel_path(artikel) %></td>
-        <td><%= link_to 'Destroy', artikel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <td><%= link_to 'Edit', edit_artikel_path(artikel) %></td>
+        <td><%= link_to 'Destroy', artikel, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +29,5 @@
 <br>
 
 <%= link_to 'New Artikel', new_artikel_path %>
+</div>
 </div>

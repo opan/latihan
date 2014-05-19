@@ -1,22 +1,22 @@
-<h1>Listing puisis</h1>
-
-<table>
+<div class="table-container container">
+<div class="well">
+<h3>Daftar Puisi</h3>
+</div>
+<div class="table-responsive">
+<table  class="table table-condensed table-bordered table-hover table-striped" style="text-align: justify">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Puisi type</th>
-      <th>Puisi tema</th>
-      <th>Puisi for</th>
-      <th>Puisi con</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Judul</th>
+      <th>Tipe Puisi</th>
+      <th>Tema Puisi</th>
+      <th>Untuk</th>
+      <th>Isi Puisi</th>
     </tr>
   </thead>
 
   <tbody>
     <% @puisis.each do |puisi| %>
-      <tr>
+      <tr onclick="redirectTo('<%= puisi_path(puisi.id)%>')"  style="cursor: pointer">
         <td><%= puisi.title %></td>
         <td><%= puisi.puisi_type %></td>
         <td><%= puisi.puisi_tema %></td>
@@ -29,7 +29,8 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'New Puisi', new_puisi_path %>
+</div>

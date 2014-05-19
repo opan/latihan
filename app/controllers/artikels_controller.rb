@@ -4,11 +4,10 @@ class ArtikelsController < ApplicationController
   # GET /artikels
   # GET /artikels.json
   def index
-    q           = params[:q][:s] rescue "id ASC"
-    @q          = Artikel.search(params[:q])
-    @artikels   = @q.result(:distinct => true).order(q)
-
-
+    q                    = params[:q][:s] rescue "id ASC"
+    @q                   = Artikel.search(params[:q])
+    @artikels            = @q.result(:distinct => true).order(q)
+    @q.build_condition
   end
 
   # GET /artikels/1

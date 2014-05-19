@@ -1,8 +1,11 @@
 Latihan::Application.routes.draw do
   resources :puisis
 
-  resources :artikels
-
+  resources :artikels do
+    collection { post :search , to: 'artikels#index'}
+    collection { get  :search , to: 'artikels#index'}
+  end 
+  
   resources :home_pages
 
   root 'home_pages#index'
